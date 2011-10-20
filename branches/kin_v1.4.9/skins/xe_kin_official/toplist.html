@@ -1,0 +1,52 @@
+	<div class="topPeriodPoint">
+		<table width="100%" cellspacing="0" cellpadding="0" border="0"  class="listBox">
+			<thead><tr><th colspan=2>{$lang->topLastWeek} 5</th></tr></thead>
+			<tbody>
+				<!--@foreach($document_top['lastWeek'] as $row)-->
+				<tr>
+					<td width="50%" class="ln23">
+						&nbsp;{$row['user_name']}
+					</td>
+					<td width="50%" align="right" class="ln23">
+						{number_format($row['point'])}&nbsp;&nbsp;
+					</td>
+				</tr>
+				<!--@end-->
+			</tbody>
+		</table>
+	</div>
+	<div class="MonthTopPoint">
+		<table width="100%" cellspacing="0" cellpadding="0" border="0"  class="listBox">
+			<thead><tr><th colspan=2>{$lang->topLastMonth} 5</th></tr></thead>
+			<tbody>
+				<!--@foreach($document_top['lastMonth'] as $row)-->
+				<tr>
+					<td width="50%" class="ln23">
+						&nbsp;{$row['user_name']}
+					</td>
+					<td width="50%" align="right" class="ln23">
+						{number_format($row['point'])}&nbsp;&nbsp;
+					</td>
+				</tr>
+				<!--@end-->
+			</tbody>
+		</table>
+	</div>
+	<div class="topPoint">
+		<table width="100%" cellspacing="0" cellpadding="0" border="0" class="listBox">
+			<thead><tr><th colspan=2>{$lang->topToltal} 5</th></tr></thead>
+			<tbody>
+				<!--@foreach($document_top['lastYear'] as $row)-->
+				<tr>
+					<td width="50%" class="ln23">
+						&nbsp;{$row['user_name']}
+					</td>
+					<td width="50%" align="right" class="ln23">
+						{number_format($row['point'])}&nbsp;&nbsp;
+					</td>
+				</tr>
+				<!--@end-->
+			</tbody>
+		</table>
+	</div>
+
