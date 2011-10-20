@@ -1,0 +1,42 @@
+<!--#include("./_header.html")-->
+{$addition_content}
+
+<script>
+	jQuery(function($){
+		$('div.body form').each(function(index,elem){
+			if(index==1 || index == 4 || index == 5){
+				elem.style.display = 'none';
+			}
+			if(index==0){
+				$('table.rowTable tr td',elem).each(function(subIndex,subElem){					
+					if(subIndex == 1 || subIndex==2){
+						subElem.style.display = 'none';
+					}
+				});
+				$('table.rowTable tr th',elem).each(function(subIndex,subElem){
+					if(subIndex == 1 || subIndex==2){	
+						subElem.style.display = 'none';
+					}
+				});
+				var comment_count = '{$lang->comment_count_kin}';
+				var about_comment_count = '{$lang->about_comment_count_kin}';
+				$(this).find('table.rowTable tr').first().find('th div').text(comment_count);
+				$(this).find('table.rowTable tr').first().find('td p').text(about_comment_count);
+			}
+			if(index==2){
+				$(this).find('table.crossTable tr').last().find('span').css('float','right');
+			}
+		})
+		if($('form#fo_point>table.rowTable').find('tr').length){
+			$('form#fo_point>table.rowTable').find('tr').each(function(i, e){
+				if(i!=1 && i!=$('form#fo_point>table.rowTable').find('tr').length-1) $(this).hide();
+				if(i==1){
+					$(this).find('th').width('17%');
+					var point_insert_comment = '{$lang->point_insert_comment_kin}';
+					$(this).find('th div').text(point_insert_comment);
+					$(this).attr('class','');
+				}
+			});
+		}
+	});
+</script>
