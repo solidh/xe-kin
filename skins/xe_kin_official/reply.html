@@ -19,12 +19,12 @@
         <div class="roundBoxGuide"><span class="roundBoxTl"></span><span class="roundBoxTr"></span></div>
         <div class="roundContents content_kin">
             <div class="titleArea">
-                <h3>{$oDocument->getTitle()}</h3>
+                <h3>{removeHackTag($oDocument->getTitle())}</h3>
                 <a href="#" onclick="return false;" class="author member_{$oDocument->get('member_srl')}">{$oDocument->getNickName()}</a>
                 <span class="date"><strong>{$oDocument->getRegdate('Y.m.d')}</strong> {$oDocument->getRegdate('H:i')}</span>
             </div>
             <div class="docContent noline">
-                {$oDocument->getContent(false,false)}
+                {removeHackTag($oDocument->getContent(false,false))}
             </div>
         </div>
         <div class="roundBoxGuide"><span class="roundBoxBl"></span><span class="roundBoxBr"></span></div>
