@@ -111,7 +111,7 @@
 			<block cond="$type=='my_replies' && $is_logged">{$lang->kin_main_tabs[6]}</block>
 			<block cond="$search_keyword">
 				<span>, {$lang->search_keyword} :</span>
-				{$search_keyword}
+				{htmlspecialchars($search_keyword)}
 			</block>
 			</strong>
 			{$lang->msg_no_article}
