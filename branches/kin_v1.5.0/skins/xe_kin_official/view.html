@@ -57,7 +57,7 @@
             <div cond="$selected_reply == $reply->comment_srl" class="selectedReply">
                 {$lang->msg_selected_reply}
             </div>
-            {$reply->getContent()}
+            {removeHackTag($reply->getContent())}
         </div>
 
         <dl cond="$reply->hasUploadedFiles()" class="attachedFile">
