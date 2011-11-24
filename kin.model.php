@@ -82,7 +82,7 @@
         		return array();
         	}
         	foreach($data as $key => $obj){
-        		if($obj instanceof commentItem){
+        		if(is_a($objs,commentItem)){
         			$args->documentSrls[] = $obj->comment_srl;
         		}
         		$args->documentSrls[] = $obj->document_srl;
