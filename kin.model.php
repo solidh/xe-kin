@@ -228,9 +228,9 @@
             return $result;
         }
 
-		private function _transObjToArr($obj){
+		function _transObjToArr($obj){
 			$result = (array)$obj;
-			foreach($result as &$val){
+			foreach($result as $val){
             	$val = (array)$val;
             }
             return $result;
@@ -310,7 +310,7 @@
             return $result;
         }
 
-        public function getUserPoint($member_srl = null){
+        function getUserPoint($member_srl = null){
 			$point = $oPointModel->getPoint($member_srl);
 
         }
