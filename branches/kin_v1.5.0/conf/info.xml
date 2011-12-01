@@ -6,7 +6,7 @@
     <description xml:lang="ko">질문과 답변을 하고 답변을 채택할 수 있는 XE 지식인 모듈입니다.</description>
     <description xml:lang="zh-CN">提问、回答及采纳为一体的XE互动问答平台。</description>
 	<description xml:lang="en">The module enables you ask questions,get answers from real people, and share your insights and knowledge with other users around the world</description>
-    <version>1.5.0.8</version>
+    <version>1.5.0.9</version>
     <date>2011-12-01</date>
     <category>service</category>
 
